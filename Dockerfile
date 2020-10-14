@@ -11,5 +11,8 @@ RUN gem install bundler && bundle install
 # Copy local code to the container image.
 COPY . ./
 
+# Expose 8080
+EXPOSE 8080
+
 # Run the web service on container startup.
 CMD ["ruby", "./app.rb"]
